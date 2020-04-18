@@ -3,7 +3,7 @@ package learn.something.prototype;
 import learn.something.prototype.framework.Manager;
 import learn.something.prototype.framework.Comment;
 
-public class Main {
+public class PrototypeMain {
 
     public static void main(String[] args) {
         Manager manager = new Manager();

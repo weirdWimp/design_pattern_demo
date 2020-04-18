@@ -3,7 +3,7 @@ package learn.something.factory_method;
 import learn.something.factory_method.framework.Product;
 import learn.something.factory_method.idcard.IdCardFactory;
 
-public class Main {
+public class FactoryMethodMain {
 
     public static void main(String[] args) {
 
