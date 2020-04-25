@@ -1,6 +1,11 @@
 package learn.something.bridge;
 
 import learn.something.bridge.function.CountDisplay;
+import learn.something.bridge.function.Display;
+import learn.something.bridge.function.IncreaseDisplay;
+import learn.something.bridge.function.RandomCountDisplay;
+import learn.something.bridge.impl.CharDisplayImpl;
+import learn.something.bridge.impl.FileDisplayImpl;
 import learn.something.bridge.impl.StringDisplayImpl;
 
 /**
@@ -14,5 +19,17 @@ public class BridgeMain {
     public static void main(String[] args) {
         CountDisplay countDisplay = new CountDisplay(new StringDisplayImpl("Love is a good thing."));
         countDisplay.multiDisplay(10);
+
+        RandomCountDisplay randomDisplay = new RandomCountDisplay(new StringDisplayImpl("Random Display"), 10);
+        randomDisplay.randomDisplay();
+
+        Display display = new Display(new FileDisplayImpl("D:\\Markdown 目录\\Markdown 文档\\文学&歌曲\\楚歌.md"));
+        display.display();
+
+        IncreaseDisplay increaseDisplay1 = new IncreaseDisplay(new StringDisplayImpl("*"), 1);
+        increaseDisplay1.increaseDisplay(5);
+
+        IncreaseDisplay increaseDisplay2 = new IncreaseDisplay(new CharDisplayImpl("{", "*", "}"), 1);
+        increaseDisplay2.increaseDisplay(5);
     }
 }
