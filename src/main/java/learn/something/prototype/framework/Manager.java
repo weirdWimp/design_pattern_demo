@@ -8,7 +8,7 @@ import java.util.Map;
  */
 public class Manager {
 
-    Map<String, Comment> map = new HashMap<>();
+    private Map<String, Comment> map = new HashMap<>();
 
     public void register(String name, Comment product) {
         map.put(name, product);
